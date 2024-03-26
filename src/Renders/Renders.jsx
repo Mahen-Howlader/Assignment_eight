@@ -1,30 +1,33 @@
 import Layout from "../Layout/Layout";
-import Home from "../Page/Home";
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
-import ListesBook from "../Page/ListesBook";
+import { createBrowserRouter } from 'react-router-dom';
+import ListesBook from './../Page/ListesBook';
 import PageRead from "../Page/PageRead";
+import Signin from "../Containers/SingIn_Up/Signin";
+import Signup from "../Containers/SingIn_Up/Signup";
 
 const routers = createBrowserRouter([
     {
       path: "/",
-      element: <Home></Home>,
-    children: [
+      element: <Layout></Layout>,
+      children:[
         {
-            path : "/",
-            element : <Layout></Layout>
+          path: "/listedbook",
+          element : <ListesBook></ListesBook>
         },
         {
-            path : "/listbook",
-            element : <ListesBook></ListesBook>
+          path: "/pageread",
+          element : <PageRead></PageRead>
         },
         {
-            path : "/pageread",
-            element : <PageRead></PageRead>
-        }
-    ]
+          path: "/",
+          element : <Signin></Signin>
+        },
+        {
+          path: "/signup",
+          element : <Signup></Signup>
+        },
+      ]
     },
   ]);
 
-export default routers
+  export default routers
