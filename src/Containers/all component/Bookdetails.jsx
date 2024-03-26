@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router";
 import useDataget from "../../Coustome Hooks/useDataget";
 import { useEffect, useState } from "react";
+import { getLocalStoresSetData, getLocalStoresSetDataWishlist } from "../../utils/utilitis";
 
 function Bookdetails() {
   const [detailsData, setDetailsData] = useState({});
@@ -11,9 +12,11 @@ function Bookdetails() {
     if (data) {
       const fin = data.find((val) => val.bookId === +clickID);
       setDetailsData(fin);
+    }else{
+      alert("already data")
     }
   }, [clickID, data]);
-  console.log(detailsData);
+  // console.log(detailsData.bookId);
   const {
     bookName,
     author,
@@ -26,7 +29,6 @@ function Bookdetails() {
     publisher,
     yearOfPublishing,
   } = detailsData || {};
-
   return (
     <div>
       <div>
@@ -78,8 +80,8 @@ function Bookdetails() {
                 </h2>
               </div>
               <div className="my-10 flex gap-x-5">
-                <button className="btn btn-outline btn-info hover:bg-[#50B1C9] hover:border-none">Read</button>
-                <button className="btn hover:bg-none bg-[#50B1C9]">Wishlist</button>
+                <button onClick={()=>getLocalStoresSetData(detailsData,"read")} className="btn btn-outline btn-info hover:bg-[#50B1C9] hover:border-none">Read</button>
+                <button onClick={()=>getLocalStoresSetDataWishlist(detailsData,"read","wishlist")} className="btn hover:bg-none bg-[#50B1C9]">Wishlist</button>
               </div>
             </div>
           </div>
