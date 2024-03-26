@@ -1,8 +1,11 @@
+import Banner from "../Containers/all component/Banner";
+import Bookscart from "../Containers/all component/Bookscart";
 
 function Home() {
     return (
         <div>
-            <h1>Home</h1>
+            <Banner></Banner>
+            <Bookscart></Bookscart>
         </div>
     );
 }

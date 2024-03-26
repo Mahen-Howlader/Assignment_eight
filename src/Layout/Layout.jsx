@@ -1,12 +1,12 @@
 import Nav from "../Containers/NavFooter/Nav";
-import Banner from "../Containers/all component/Banner";
+import Home from "../Page/Home";
 
   
 function Layout() {
     return (
         <div className="container mx-auto">
             <Nav></Nav>
-            <Banner></Banner>
+            <Home></Home>
         </div>
     );
 }

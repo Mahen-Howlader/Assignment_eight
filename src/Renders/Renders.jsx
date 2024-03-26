@@ -15,6 +15,10 @@ const routers = createBrowserRouter([
           element : <ListesBook></ListesBook>
         },
         {
+          path: "/bookdetails/:clickID",
+          element : 
+        },
+        {
           path: "/pageread",
           element : <PageRead></PageRead>
         },
