@@ -7,15 +7,13 @@ function useDataget() {
     useEffect(() => {
         const getFunData = async () => {
             setLoading(true)
-            const api = await fetch("./books.json")
+            const api = await fetch("/booksData.json")
             const covatData = await api.json()
             setData(covatData)
             setLoading(false)
         }
         getFunData()
     }, [])
-
-
 
     return {data,loading};
 }

@@ -4,6 +4,8 @@ import ListesBook from './../Page/ListesBook';
 import PageRead from "../Page/PageRead";
 import Signin from "../Containers/SingIn_Up/Signin";
 import Signup from "../Containers/SingIn_Up/Signup";
+import Bookdetails from "../Containers/all component/Bookdetails";
+import Home from "../Page/Home";
 
 const routers = createBrowserRouter([
     {
@@ -11,19 +13,23 @@ const routers = createBrowserRouter([
       element: <Layout></Layout>,
       children:[
         {
+          path: "/",
+          element : <Home></Home>
+        },
+        {
           path: "/listedbook",
           element : <ListesBook></ListesBook>
         },
         {
           path: "/bookdetails/:clickID",
-          element : 
+          element : <Bookdetails></Bookdetails>
         },
         {
           path: "/pageread",
           element : <PageRead></PageRead>
         },
         {
-          path: "/",
+          path: "/signin",
           element : <Signin></Signin>
         },
         {

@@ -67,7 +67,7 @@ function Nav() {
           </ul>
         </div>
         <div className="navbar-end gap-x-4">
-          <NavLink to="/"   className={({ isActive }) =>
+          <NavLink to="/signin"   className={({ isActive }) =>
                   isActive ? "border-2 px-3 py-1 duration-300 hover:bg-[#23BE0A] bg-[#23BE0A] text-white border-[#23BE0A] rounded-lg btn" : "btn"
                 }>Sign in
 				

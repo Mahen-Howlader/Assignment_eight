@@ -1,5 +1,5 @@
 // bg-[#23BE0A]
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
 function Cart({ data }) {
   const {
@@ -7,17 +7,11 @@ function Cart({ data }) {
     bookName,
     author,
     image,
-    review,
-    totalPages,
     rating,
-    category,
-    tags,
-    publisher,
-    yearOfPublishing,
-  } = data;
+  } = data || {};
   return (
-    <div>
-      <NavLink to={`/bookdetails${bookId}`} className="card  bg-base-100 shadow-xl border">
+    <Link to={`/bookdetails/${bookId}`}>
+      <div className="card  bg-base-100 shadow-xl border">
         <figure className="px-10 m-10 mb-0  pt-10 bg-[#F3F3F3]">
           <img src={image} alt="Shoes" className="rounded-xl" />
         </figure>
@@ -41,8 +35,8 @@ function Cart({ data }) {
             </div>
           </div>
         </div>
-      </NavLink>
-    </div>
+      </div>
+    </Link>
   );
 }
 
