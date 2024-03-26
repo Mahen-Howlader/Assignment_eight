@@ -1,3 +1,5 @@
+
+
 export function getLocalStoresGetData(name){
     const get = localStorage.getItem(name)
     if(get){
@@ -6,7 +8,9 @@ export function getLocalStoresGetData(name){
     return [];
 }
 
-export function getLocalStoresSetData(data,name){
+
+
+export function getLocalStoresSetData(data,name,successAlert,errorAlert){
     const get = getLocalStoresGetData(name);
     console.log(get)
     const finData = get.find(val => val.bookId === data.bookId)
@@ -14,13 +18,14 @@ export function getLocalStoresSetData(data,name){
     if(!finData){
         get.push(data)
         localStorage.setItem(name, JSON.stringify(get))
+        successAlert()
     }else{
-        alert("already exist")
+        errorAlert()
     }
 }
 
 
-export function getLocalStoresSetDataWishlist(data,name,wishList){
+export function getLocalStoresSetDataWishlist(data,name,wishList,successAlert,errorAlert){
     const get = getLocalStoresGetData(name);
     const wishListGetData = getLocalStoresGetData(wishList);
     const finData = get.find(val => val.bookId === data.bookId)
@@ -30,7 +35,8 @@ export function getLocalStoresSetDataWishlist(data,name,wishList){
     if(!wishFin && !finData){
         wishListGetData.push(data)
         localStorage.setItem(wishList, JSON.stringify(wishListGetData))
+        successAlert()
     }else{
-        alert("already exist")
+        errorAlert()
     }
 }

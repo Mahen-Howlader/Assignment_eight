@@ -19,11 +19,14 @@ function ListesBook() {
         <h1>Books</h1>
       </div>
       <div className="flex justify-center my-2">
-        <details className="dropdown">
-          <summary className="m-1 btn bg-[#23BE0A]  text-white ">
-            open or close
-          </summary>
-          <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-300 rounded-box w-36">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="m-1 btn bg-[#23BE0A]  text-white ">
+            Sort by
+          </div>
+          <ul
+            tabIndex={0}
+            className="p-2 shadow menu dropdown-content z-[1] bg-base-300 rounded-box w-36"
+          >
             <li>
               <a>Item 1</a>
             </li>
@@ -31,7 +34,7 @@ function ListesBook() {
               <a>Item 2</a>
             </li>
           </ul>
-        </details>
+        </div>
       </div>
       <div>
         <Tabs>
@@ -64,7 +67,7 @@ function ListesBook() {
             </div>
           </TabPanel>
           <TabPanel>
-          {getWishList.map((val) => (
+            {getWishList.map((val) => (
               <Readpage key={val.bookId} data={val}></Readpage>
             ))}
           </TabPanel>

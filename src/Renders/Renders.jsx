@@ -6,11 +6,13 @@ import Signin from "../Containers/SingIn_Up/Signin";
 import Signup from "../Containers/SingIn_Up/Signup";
 import Bookdetails from "../Containers/all component/Bookdetails";
 import Home from "../Page/Home";
+import ErrorHandel from "../Containers/all component/ErrorHandel";
 
 const routers = createBrowserRouter([
     {
       path: "/",
       element: <Layout></Layout>,
+      errorElement : <ErrorHandel></ErrorHandel>, 
       children:[
         {
           path: "/",

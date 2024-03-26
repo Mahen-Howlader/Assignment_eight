@@ -2,11 +2,21 @@ import { useLoaderData, useParams } from "react-router";
 import useDataget from "../../Coustome Hooks/useDataget";
 import { useEffect, useState } from "react";
 import { getLocalStoresSetData, getLocalStoresSetDataWishlist } from "../../utils/utilitis";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Bookdetails() {
   const [detailsData, setDetailsData] = useState({});
   const { clickID } = useParams();
   const { data, loading } = useDataget();
+
+  function successAlert(){
+    toast.success(" be added to the list. !");
+  }
+  function errorAlert(){
+    toast.error("already been added!");
+  }
 
   useEffect(() => {
     if (data) {
@@ -80,13 +90,14 @@ function Bookdetails() {
                 </h2>
               </div>
               <div className="my-10 flex gap-x-5">
-                <button onClick={()=>getLocalStoresSetData(detailsData,"read")} className="btn btn-outline btn-info hover:bg-[#50B1C9] hover:border-none">Read</button>
-                <button onClick={()=>getLocalStoresSetDataWishlist(detailsData,"read","wishlist")} className="btn hover:bg-none bg-[#50B1C9]">Wishlist</button>
+                <button onClick={()=>getLocalStoresSetData(detailsData,"read",successAlert,errorAlert)} className="btn btn-outline btn-info hover:bg-[#50B1C9] hover:border-none">Read</button>
+                <button onClick={()=>getLocalStoresSetDataWishlist(detailsData,"read","wishlist",successAlert,errorAlert)} className="btn hover:bg-none bg-[#50B1C9]">Wishlist</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
