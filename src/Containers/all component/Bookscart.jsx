@@ -3,7 +3,6 @@ import Cart from "./Cart";
 
 function Bookscart() {
    const {data,loading} = useDataget()
-   console.log(data)
     return (
         <div>
             <h1 className="text-4xl text-center font-bold">Books</h1>

@@ -71,9 +71,9 @@ function Bookdetails() {
                       ))}
                   </span>
                 </p>
-              </div>
               <hr />
-              <div className="space-y-2">
+              </div>
+              <div className="space-y-2 mt-2">
                 <h2>
                   Number of Pages:{" "}
                   <span className="font-bold">{totalPages}</span>

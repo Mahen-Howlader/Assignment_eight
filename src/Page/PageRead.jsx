@@ -4,15 +4,6 @@ import { useEffect, useState } from "react";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
-// const data = [
-//   {
-//     name: 'Page A',
-//     uv: 4000,
-//     pv: 2400,
-//     amt: 2400,
-//   },
-// ]
-
 
 // bookName
 // totalPages
@@ -36,6 +27,8 @@ const TriangleBar = (props) => {
 
 export default function PageRead() {
   const [data,setData] = useState([]);
+
+  // your localstors data 
   useEffect(() => {
     const data = getLocalStoresGetData("read");
       setData(data)

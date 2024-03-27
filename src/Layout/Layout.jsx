@@ -7,7 +7,6 @@ function Layout() {
         <div className="container mx-auto">
             <Nav></Nav>
             <Outlet></Outlet>
-          
         </div>
     );
 }

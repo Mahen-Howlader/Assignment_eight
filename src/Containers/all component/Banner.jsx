@@ -14,7 +14,7 @@ function Banner() {
             </h1>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
               <NavLink
-              to="/viewlist"
+              to="/listedbook"
                 className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 bg-[#23BE0A] text-white dark:text-gray-50"
               >
                 View The List
