@@ -61,6 +61,6 @@ export default function PageRead() {
       ))}
     </Bar>
   </BarChart> 
-</div>: <div className="flex justify-center items-center h-[80vh]"><h1 className=" font-bold text-4xl text-red-500">Please Book read && add</h1></div>
+</div>: <div className="flex justify-center items-center h-[80vh]"><h1 className=" font-bold text-4xl text-red-500">Book read && wishlist cart add</h1></div>
   );
 }

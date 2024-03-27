@@ -42,12 +42,12 @@ function Bookdetails() {
   return (
     <div>
       <div>
-        <div className="m-20 ">
-          <div className="flex ">
-            <div className="flex-1 flex justify-center items-center bg-base-200 rounded-lg">
-              <img className="w-96" src={image} />
+        <div className="lg:m-20">
+          <div className="lg:flex ">
+            <div className="lg:flex-1 flex justify-center items-center bg-base-200 rounded-lg">
+              <img className="min-w-64 lg:min-w-80" src={image} />
             </div>
-            <div className="ml-20 flex-1">
+            <div className="mt-5 lg:mt-0 lg:ml-20 lg:flex-1">
               <div className="space-y-3">
                 <h1 className="text-2xl font-bold">{bookName}</h1>
                 <p className="">By: {author}</p>

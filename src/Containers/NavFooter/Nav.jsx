@@ -3,29 +3,17 @@ import {
   NavLink,
   useLoaderData,
   Form,
-  redirect,	
+  redirect,
 } from "react-router-dom";
+import { IoMenu } from "react-icons/io5";
 function Nav() {
   return (
     <div className="my-3">
       <div className="navbar">
-        <div className="navbar-start">
+        <div className=" flex justify-between  w-full   lg:justify-start md:w-1/2">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <div tabIndex={0} role="button" className="btn p-0 btn-ghost lg:hidden">
+            <IoMenu size={30} />
             </div>
             <ul
               tabIndex={0}
@@ -40,43 +28,51 @@ function Nav() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu-horizontal font-semibold items-center gap-x-10 text-xl px-1">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg" : ""
-                }
-                to="/"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg" : ""
-                }
-                to="/listedbook"
-              >
-                Listed Books
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg" : ""
-                }
-				to="/pageread"
-              >
-                Pages to Read
-              </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg"
+                  : ""
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg"
+                  : ""
+              }
+              to="/listedbook"
+            >
+              Listed Books
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg"
+                  : ""
+              }
+              to="/pageread"
+            >
+              Pages to Read
+            </NavLink>
           </ul>
         </div>
-        <div className="navbar-end gap-x-4">
-          <NavLink to="/signin"   className={({ isActive }) =>
-                  isActive ? "border-2 px-3 py-1 duration-300 hover:bg-[#23BE0A] bg-[#23BE0A] text-white border-[#23BE0A] rounded-lg btn" : "btn"
-                }>Sign in
-				
-		</NavLink>
-          <NavLink to="/signup"      className={({ isActive }) =>
-                 isActive ? "border-2 px-3 py-1 duration-300 hover:bg-[#23BE0A] bg-[#23BE0A] text-white border-[#23BE0A] rounded-lg btn" : "btn"
-                }>Sign Up
-				
-		</NavLink>
+        <div className="hidden md:flex navbar-end gap-x-4">
+          <NavLink
+            to="/signin"
+            className={`b px-3 rounded-lg py-2  text-white  bg-[#23BE0A]`}
+          >
+            Sign in
+          </NavLink>
+          <NavLink
+            to="/signup"
+            className={`px-3 rounded-lg py-2 bg-[#060707] text-white `}
+          >
+            Sign Up
+          </NavLink>
         </div>
       </div>
     </div>
