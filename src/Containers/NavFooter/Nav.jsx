@@ -12,8 +12,12 @@ function Nav() {
       <div className="navbar">
         <div className=" flex justify-between  w-full   lg:justify-start md:w-1/2">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn p-0 btn-ghost lg:hidden">
-            <IoMenu size={30} />
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn p-0 btn-ghost lg:hidden"
+            >
+              <IoMenu size={30} />
             </div>
             <ul
               tabIndex={0}
@@ -21,6 +25,13 @@ function Nav() {
             >
               <li>
                 <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/listedbook">Listed Books</NavLink>
+              </li>
+              <li>
+                
+                <NavLink to="/pageread">Pages to Read</NavLink>
               </li>
             </ul>
           </div>

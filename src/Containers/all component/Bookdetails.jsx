@@ -57,14 +57,14 @@ function Bookdetails() {
                 <p className="font-bold">
                   Review : <span className="font-normal">{review}</span>
                 </p>
-                <p className="font-bold flex gap-x-10 items-center">
-                  Tags :
-                  <span className="font-normal flex list-none gap-x-4">
+                <p className="font-bold flex gap-x-5 md:gap-x-10 items-center">
+                  <span className="text-nowrap">Tags :</span>
+                  <span className="font-normal flex flex-wrap list-none gap-y-2 sm:gap-y-0 gap-x-2 md:gap-x-4">
                     {tags &&
                       tags.map((val, index) => (
                         <li
                           key={index}
-                          className="bg-[#F3F3F3] p-2 rounded-lg font-semibold text-[#23BE0A]"
+                          className="bg-[#F3F3F3] p-2 rounded-lg lg:font-semibold text-[#23BE0A]"
                         >
                           #{val}
                         </li>

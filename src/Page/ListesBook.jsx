@@ -11,15 +11,18 @@ function ListesBook() {
   const [getReadFilters, setReaddatafilters] = useState([]);
 
   const [getWishList, setgetWishList] = useState([]);
+
   useEffect(() => {
     const getRead = getLocalStoresGetData("read");
     setgetRead(getRead);
     setReaddatafilters(getRead);
+
     const getWishList = getLocalStoresGetData("wishlist");
     setgetWishList(getWishList);
   }, []);
 
   var byDate = getRead.slice(0);
+
   function handelSortData(sort) {
     if (sort === "Rating") {
       byDate.sort(function (a, b) {
@@ -53,6 +56,7 @@ function ListesBook() {
   function goBackHanel(){
     navigate(-1)
   }
+
 
   return (
     <div>
