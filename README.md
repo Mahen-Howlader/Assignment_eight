@@ -4,6 +4,7 @@
 
 ## Features and Characteristics:
 
+
 - **Destination Discovery:** Explore a wide range of destinations around the globe, from popular tourist spots to hidden gems, with detailed information about attractions, culture, and local tips.
 - **Customized Itineraries:** Plan your trips efficiently with personalized itineraries tailored to your preferences, including activities, accommodations, transportation options, and budget considerations.
 - **Interactive Maps:** Navigate effortlessly through cities and regions with interactive maps, pinpointing key landmarks, restaurants, hotels, and other points of interest for a seamless travel experience.
