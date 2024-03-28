@@ -1,9 +1,10 @@
 import { IoIosSend } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import 'animate.css';
 function Contact() {
   return (
     <div className="my-10">
-      <h1 className="text-3xl font-bold">Send Message</h1>
+      <h1 className="text-3xl font-bold animate__animated animate__infinite	infinite animate__headShake">Send Message</h1>
       <div className="md:flex gap-x-20 mt-5">
         <div className="flex-1">
         <form className="">
@@ -80,7 +81,7 @@ function Contact() {
         </div>
         <div className="flex-1 ">
           <h1
-            className="text-4xl mt-5 md:mt-0 font-bold
+            className="text-4xl mt-5 md:mt-0 font-bold animate__animated animate__bounce
           "
           >
             Contact Info

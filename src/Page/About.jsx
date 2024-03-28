@@ -2,8 +2,8 @@
 function About() {
   return (
     <div>
-      <h1 className="text-center text-3xl md:text-5xl font-bold">Know About me</h1>
-      <div className="flex justify-center mt-10 md:mt-20">
+      <h1 className="text-center text-3xl md:text-3xl font-bold">Know About me</h1>
+      <div className="flex justify-center mt-5 md:mt-10">
         <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             src="./profile.jpg"

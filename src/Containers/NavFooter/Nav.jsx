@@ -1,3 +1,4 @@
+import FancyText from "@carefully-coded/react-text-gradient";
 import {
   Outlet,
   NavLink,
@@ -6,7 +7,9 @@ import {
   redirect,
 } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
+import { useEffect, useState } from "react";
 function Nav() {
+
   return (
     <div className="my-3">
       <div className="navbar">
@@ -30,20 +33,24 @@ function Nav() {
                 <NavLink to="/listedbook">Listed Books</NavLink>
               </li>
               <li>
-                
                 <NavLink to="/pageread">Pages to Read</NavLink>
               </li>
               <li>
-                
                 <NavLink to="/contact">Contact</NavLink>
               </li>
               <li>
-                
                 <NavLink to="/about">About</NavLink>
               </li>
             </ul>
           </div>
-          <a className="font-bold  text-3xl uppercase">Book Vibe</a>
+          <FancyText
+            className="font-bold  text-3xl uppercase"
+            gradient={{ from: "#F858E0", to: "#77156C", type: "linear" }}
+            animate
+            animateDuration={1000}
+          >
+            Book Vibe
+          </FancyText>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu-horizontal font-semibold items-center gap-x-10 text-xl px-1">

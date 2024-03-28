@@ -4,6 +4,8 @@ import { MdOutlineContactPage } from "react-icons/md";
 import { Link } from "react-router-dom";
 import useDataget from "../../Coustome Hooks/useDataget";
 import { RingLoader } from "react-spinners";
+import FancyText from '@carefully-coded/react-text-gradient'
+
 function Readpage({ data }) {
   //   console.log(data);
   const {
@@ -19,7 +21,6 @@ function Readpage({ data }) {
     yearOfPublishing,
   } = data || {};
 
- 
   return (
     <div className="my-10">
       <div className="flex border-4 rounded-xl flex-col  p-4 space-y-4 sm:p-10 dark:bg-gray-50 dark:text-gray-800">
@@ -79,11 +80,20 @@ function Readpage({ data }) {
                     <button className="bg-[#FFF3E0] font-semibold py-2 px-3 rounded-lg text-lg">
                       Rating : {rating}
                     </button>
+
                     <Link
                       to={`/bookdetails/${bookId}`}
-                      className="bg-[#23BE0A] font-semibold text-white py-2 px-3 rounded-lg text-lg"
+                      className="border-2 border-[#23BE0A] font-semibold  text-center text-white py-2 px-3 rounded-lg text-lg"
                     >
+                      <FancyText
+                      className="font-bold"
+                        gradient={{from: '#F858E0', to: '#77156C', type: 'linear' }}
+                        animate
+                        animateDuration={1000}
+                      >
+                        
                       View Details
+                      </FancyText>
                     </Link>
                   </div>
                 </div>
