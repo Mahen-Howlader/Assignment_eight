@@ -1,6 +1,6 @@
 # TravelExplore
 
-**Live Site URL:** [https://bookssshop.netlify.app/](#)
+**Live Site URL:** [https://bookssshop.netlify.app/]
 
 ## Features and Characteristics:
 
