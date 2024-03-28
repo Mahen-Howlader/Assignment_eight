@@ -33,6 +33,14 @@ function Nav() {
                 
                 <NavLink to="/pageread">Pages to Read</NavLink>
               </li>
+              <li>
+                
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+              <li>
+                
+                <NavLink to="/about">About</NavLink>
+              </li>
             </ul>
           </div>
           <a className="font-bold  text-3xl uppercase">Book Vibe</a>
@@ -68,6 +76,26 @@ function Nav() {
               to="/pageread"
             >
               Pages to Read
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg"
+                  : ""
+              }
+              to="/contact"
+            >
+              Contact
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2  px-3 py-1 border-2 duration-300 hover:bg-[#23BE0A] hover:text-white border-[#23BE0A] rounded-lg"
+                  : ""
+              }
+              to="/about"
+            >
+              About
             </NavLink>
           </ul>
         </div>

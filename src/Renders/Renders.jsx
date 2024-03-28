@@ -7,6 +7,8 @@ import Signup from "../Containers/SingIn_Up/Signup";
 import Bookdetails from "../Containers/all component/Bookdetails";
 import Home from "../Page/Home";
 import ErrorHandel from "../Containers/all component/ErrorHandel";
+import Contact from "../Page/Contact";
+import About from "../Page/About";
 
 const routers = createBrowserRouter([
     {
@@ -37,6 +39,14 @@ const routers = createBrowserRouter([
         {
           path: "/signup",
           element : <Signup></Signup>
+        },
+        {
+          path: "/contact",
+          element : <Contact></Contact>
+        },
+        {
+          path: "/about",
+          element : <About></About>
         },
       ]
     },

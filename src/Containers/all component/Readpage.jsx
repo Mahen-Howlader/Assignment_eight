@@ -2,6 +2,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";
 import { MdOutlineContactPage } from "react-icons/md";
 import { Link } from "react-router-dom";
+import useDataget from "../../Coustome Hooks/useDataget";
+import { RingLoader } from "react-spinners";
 function Readpage({ data }) {
   //   console.log(data);
   const {
@@ -17,6 +19,7 @@ function Readpage({ data }) {
     yearOfPublishing,
   } = data || {};
 
+ 
   return (
     <div className="my-10">
       <div className="flex border-4 rounded-xl flex-col  p-4 space-y-4 sm:p-10 dark:bg-gray-50 dark:text-gray-800">
@@ -39,7 +42,7 @@ function Readpage({ data }) {
                   <div className="md:flex gap-x-10">
                     <div className="sm:flex gap-x-4 items-center text-xl">
                       <div className="flex justify-center mb-3 sm:mb-0">
-                      <span className="font-bold">Tag :</span>
+                        <span className="font-bold">Tag :</span>
                       </div>
                       <ul className="flex flex-wrap gap-x-5">
                         {tags.map((val, index) => (
@@ -54,7 +57,9 @@ function Readpage({ data }) {
                     </div>
                     <div className="flex items-center mt-4 md:mt-0 gap-1">
                       <IoLocationOutline size={20} />
-                      <h2 className="">Year of publishing : {yearOfPublishing}</h2>
+                      <h2 className="">
+                        Year of publishing : {yearOfPublishing}
+                      </h2>
                     </div>
                   </div>
                   <div className="md:flex items-center gap-x-10 text-xl">
@@ -68,9 +73,18 @@ function Readpage({ data }) {
                   </div>
                   {/* btn  */}
                   <div className="flex flex-col sm:flex-row gap-y-3 sm:gap-y-0 sm:gap-x-8">
-                    <button className="bg-[#E0EEFF] font-semibold py-2 px-3 rounded-lg text-lg">Category : {category}</button>
-                    <button className="bg-[#FFF3E0] font-semibold py-2 px-3 rounded-lg text-lg">Rating : {rating}</button>
-                    <Link to={`/bookdetails/${bookId}`} className="bg-[#23BE0A] font-semibold text-white py-2 px-3 rounded-lg text-lg">View Details</Link>
+                    <button className="bg-[#E0EEFF] font-semibold py-2 px-3 rounded-lg text-lg">
+                      Category : {category}
+                    </button>
+                    <button className="bg-[#FFF3E0] font-semibold py-2 px-3 rounded-lg text-lg">
+                      Rating : {rating}
+                    </button>
+                    <Link
+                      to={`/bookdetails/${bookId}`}
+                      className="bg-[#23BE0A] font-semibold text-white py-2 px-3 rounded-lg text-lg"
+                    >
+                      View Details
+                    </Link>
                   </div>
                 </div>
               </div>

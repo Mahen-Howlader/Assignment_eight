@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getLocalStoresSetData, getLocalStoresSetDataWishlist } from "../../utils/utilitis";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { RingLoader } from "react-spinners";
 
 
 function Bookdetails() {
@@ -27,6 +28,10 @@ function Bookdetails() {
     }
   }, [clickID, data]);
   // console.log(detailsData.bookId);
+  if (loading) {
+    return  <div className="flex justify-center items-center h-[80vh]"><RingLoader color="#36d7b7" />;</div>
+  }
+
   const {
     bookName,
     author,
@@ -97,7 +102,7 @@ function Bookdetails() {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </div>
   );
 }

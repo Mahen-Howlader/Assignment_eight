@@ -1,7 +1,8 @@
 // bg-[#23BE0A]
 import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
-function Cart({ data }) {
+import { RingLoader } from "react-spinners";
+function Cart({ data,loading }) {
   const {
     bookId,
     bookName,
@@ -9,6 +10,12 @@ function Cart({ data }) {
     image,
     rating,
   } = data || {};
+
+  // loading spinner 
+  if(loading){
+    return <RingLoader color="#36d7b7" />
+  }
+  
   return (
     <Link to={`/bookdetails/${bookId}`}>
       <div className="card  bg-base-100 shadow-xl border">

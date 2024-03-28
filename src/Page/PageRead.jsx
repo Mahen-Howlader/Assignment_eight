@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { getLocalStoresGetData } from "../utils/utilitis";
 import { useEffect, useState } from "react";
 
@@ -34,15 +34,17 @@ export default function PageRead() {
       setData(data)
   }, []);
   return (
-   data.length ? <div className="h-[80vh] flex justify-center items-center">
-  <BarChart
-    width={1000}
-    height={500}
+   data.length ? 
+    <div className="flex justify-center">
+        <BarChart
+        className="overflow-x-auto"
+    width={700}
+    height={400}
     data={data}
     margin={{
-      top: 20,
-      right: 30,
-      left: 20,
+      top: 10,
+      right: 10,
+      left: 10,
       bottom: 5,
     }}
   >
@@ -61,6 +63,7 @@ export default function PageRead() {
       ))}
     </Bar>
   </BarChart> 
-</div>: <div className="flex justify-center items-center h-[80vh]"><h1 className=" font-bold text-4xl text-red-500">Book read && wishlist cart add</h1></div>
+    </div>
+: <div className="flex justify-center items-center h-[400px]"><h1 className=" font-bold text-4xl text-red-500">Book read && wishlist cart add</h1></div>
   );
 }
